@@ -8,9 +8,13 @@ Comment header for my website -->
   <head>
      <meta charset="utf-8">
      <title>Sol's Bike Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="A small bike shop with many different brands of bikes"> 
-    <meta name="keywords" content="bike, bicycle, surf, surfboard, shop, family">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="styles/slicknav.css"> <!-- Add SlickNav CSS -->
+     <meta name="description" content="A small bike shop with many different brands of bikes"> 
+     <meta name="keywords" content="bike, bicycle, surf, surfboard, shop, family">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
+     <script src="scripts/jquery.slicknav.min.js"></script> <!-- Add SlickNav script -->
+     <script src="scripts/main.js" defer></script> <!-- Your custom JS -->
   </head>
 
   <body>
@@ -20,7 +24,19 @@ Comment header for my website -->
       <h1>Sol's Bicycle Shop</h1>
       <h2>Come on down to our shop for all of your bicycle and surf needs!.</h2>
       <p>Ride the waves or cruise the streets with our top-quality bikes and surfboards! Stop by today for expert advice, great deals, and everything you need to gear up for your next adventure!</p>
-     </header>
+    
+    <!-- Navigation Menu -->
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        
   <main>
     <h2>We have you covered for all things related to bicycles!</h2>
 
@@ -58,3 +74,10 @@ Comment header for my website -->
           Business Email: SolsBikeShop@Outlook.com
         </pre>
     </body>
+    
+    <script>
+        $(document).ready(function(){
+            $('#menu').slicknav();  // Initialize the SlickNav menu
+        });
+    </script>
+</html>
