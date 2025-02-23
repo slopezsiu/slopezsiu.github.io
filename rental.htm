@@ -11,6 +11,14 @@ Comment header for my website -->
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="A small bike shop with many different brands of bikes"> 
     <meta name="keywords" content="bike, bicycle, surf, surfboard, shop, family">
+      <!-- SlickNav CSS -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+    
+    <!-- jQuery (required for SlickNav) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- SlickNav JS -->
+    <script src="scripts/jquery.slicknav.min.js" defer></script>
   </head>
 
   <body>
@@ -19,6 +27,18 @@ Comment header for my website -->
         <img src="images/surfboardbikeshop.png" alt="Bike Shop Logo" width="50">
         <h1>Sol's Bicycle Shop Rentals </h1>
         <h2>Rental Guide Below</h2>
+        
+        <!-- Navigation Menu -->
+    <nav>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rentals.html">Rentals</a></li>
+            <li><a href="sales.html">Sales</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+        
       </header>
  
       <!-- Right Column -->
@@ -71,5 +91,10 @@ Comment header for my website -->
     <footer>
         <p>Contact us at <strong>SolsBikeShop@Outlook.com</strong> or call <strong>618-773-7733</strong> for reservations!</p>
     </footer>
+      <script>
+    $(document).ready(function(){
+        $('#menu').slicknav(); // Initialize SlickNav on the #menu element
+    });
+</script>
     </body>
     </html>          
