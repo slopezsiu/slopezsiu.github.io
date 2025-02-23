@@ -8,12 +8,14 @@ Comment header for my website -->
   <head>
      <meta charset="utf-8">
      <title>Sol's Bike Website</title>
-     <link rel="stylesheet" href="styles.css">
-     <link rel="stylesheet" href="styles/slicknav.css"> <!-- Add SlickNav CSS -->
+     <!-- Corrected stylesheet paths -->
+     <link rel="stylesheet" href="styles.css"> <!-- Your custom CSS -->
+     <link rel="stylesheet" href="styles/slicknav.css"> <!-- SlickNav CSS -->
      <meta name="description" content="A small bike shop with many different brands of bikes"> 
      <meta name="keywords" content="bike, bicycle, surf, surfboard, shop, family">
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
-     <script src="scripts/jquery.slicknav.min.js"></script> <!-- Add SlickNav script -->
+     <!-- Add jQuery and SlickNav JS from CDN to avoid issues with local file paths -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+     <script src="https://cdn.jsdelivr.net/npm/slicknav@1.0.0/dist/slicknav.min.js"></script> <!-- SlickNav JS -->
      <script src="scripts/main.js" defer></script> <!-- Your custom JS -->
   </head>
 
@@ -22,7 +24,7 @@ Comment header for my website -->
         <!-- HTML Element #1 (img/Graphic) -->
         <img src="images/surfboardbikeshop.png" alt="Bike Shop Logo" width="50">
       <h1>Sol's Bicycle Shop</h1>
-      <h2>Come on down to our shop for all of your bicycle and surf needs!.</h2>
+      <h2>Come on down to our shop for all of your bicycle and surf needs!</h2>
       <p>Ride the waves or cruise the streets with our top-quality bikes and surfboards! Stop by today for expert advice, great deals, and everything you need to gear up for your next adventure!</p>
     
     <!-- Navigation Menu -->
@@ -37,47 +39,41 @@ Comment header for my website -->
         </nav>
     </header>
         
-  <main>
-    <h2>We have you covered for all things related to bicycles!</h2>
+    <main>
+        <h2>We have you covered for all things related to bicycles!</h2>
+        <p><strong>Services and products we provide are listed below</strong></p>
+        <ul>
+            <li>Bike Sales: Wide selection of bikes for all types of riders – road bikes, mountain bikes, hybrids, cruisers, and kids' bikes.</li>
+            <li>Custom Bike Builds: Tailor your bike to your exact specifications with our expert customization services</li>
+            <li>Bike Repairs & Maintenance: From tune-ups to full overhauls, we keep your bike running smoothly.</li>
+            <li>Bike Accessories: A wide range of accessories including helmets, lights, locks, racks, and more.</li>
+            <li>Bike Rentals: Rent a bike for a day or a weekend and explore the area with ease.</li>
+            <li>Bike Washing & Detailing: Keep your bike looking like new with our thorough cleaning and detailing service.</li>
+        </ul>
+        
+        <h2>We also have you covered for all things related to surfboards!</h2>
+        <p>We welcome all surfers to stop by our shop and check out our expansive selection.</p>
+        <p>Make sure to always remember, <q>Life is like riding a bicycle. To keep your balance, you must keep moving</q> - <em>Albert Einstein</em></p>
+        <p>Our contact information and address can be found below!</p>
+    </main>
+    
+    <!-- Business Address -->
+    <pre>
+        Store Address:
+        Sol's Bicycle Shop
+        773 Cycling Ln
+        Chicago, IL 62901
 
-    <!-- HTML Element #2 (strong/Bolds) - Inline -->
-    <p><strong>Services and products we provide are listed below</strong></p>
-    <!-- HTML Element #3 (ul/List) -->
-    <ul>
-      <li>Bike Sales: Wide selection of bikes for all types of riders – road bikes, mountain bikes, hybrids, cruisers, and kids' bikes.</li>
-      <li>Custom Bike Builds: Tailor your bike to your exact specifications with our expert customization services</li>
-      <li>Bike Repairs & Maintenance: From tune-ups to full overhauls, we keep your bike running smoothly.</li>
-      <li>Bike Accessories: A wide range of accessories including helmets, lights, locks, racks, and more.</li>
-      <li>Bike Rentals: Rent a bike for a day or a weekend and explore the area with ease.</li>
-      <li>Bike Washing & Detailing: Keep your bike looking like new with our thorough cleaning and detailing service.</li>
-    </ul>
-   
-    
-    <h2>We also have you covered for all things related to surfboards!</h2>
-    <p>We welcome all surfers to stop by our shop and check out our expansive selection.</p>
-    <!-- HTML Element #4 (em/Italics) - Inline -->
-    <p>Make sure to always remember, <q>Life is like riding a bicycle. To keep your balance, you must keep moving</q> - <em>Albert Einstein</em></p>
-    <p>Our contact information and address can be found below!</p>
-  </main>
-    
-    <!-- HTML Element #5 (pre/Preformatted) -->
-        <pre>
-          <!-- Business Address --> 
-          Store Address:
-          Sol's Bicycle Shop
-          773 Cycling Ln
-          Chicago, IL 62901
+        Contact Name: Sol Lopez
+        Phone Number: 618-773-7733
+        Business Email: SolsBikeShop@Outlook.com
+    </pre>
 
-          <!-- Contact Name -->
-          Contact Name: Sol Lopez
-          Phone Number: 618-773-7733
-          Business Email: SolsBikeShop@Outlook.com
-        </pre>
-    </body>
-    
+    <!-- Initialization of SlickNav menu -->
     <script>
         $(document).ready(function(){
-            $('#menu').slicknav();  // Initialize the SlickNav menu
+            $('#menu').slicknav();  // Initialize SlickNav menu
         });
     </script>
+  </body>
 </html>
