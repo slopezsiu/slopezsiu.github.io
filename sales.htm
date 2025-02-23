@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Sol's Bike Sales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/jquery.slicknav.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/surfboardbikeshop.png" alt="Bike Shop Logo" width="50">
+        <h1>Sol's Bicycle Sales</h1>
+        <h2>Find the perfect bike for your adventures!</h2>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rentals.html">Rentals</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Our Bike Selection</h2>
+        <p>We offer a variety of bikes for all types of riders. Whether you're looking for a high-performance road bike or a sturdy mountain bike, we've got you covered!</p>
+        <ul>
+            <li><strong>Road Bikes:</strong> Lightweight and fast, ideal for long-distance riding.</li>
+            <li><strong>Mountain Bikes:</strong> Durable and rugged, perfect for off-road adventures.</li>
+            <li><strong>Hybrid Bikes:</strong> A balance between road and mountain bikes for versatility.</li>
+            <li><strong>Cruiser Bikes:</strong> Comfortable and stylish, great for casual rides.</li>
+            <li><strong>Kids' Bikes:</strong> Safe and fun bicycles for young riders.</li>
+        </ul>
+        <h2>Why Buy from Us?</h2>
+        <p>All our bikes come with a satisfaction guarantee, professional assembly, and optional maintenance packages.</p>
+    </main>
+    <footer>
+        <p>Contact us at <strong>SolsBikeShop@Outlook.com</strong> or call <strong>618-773-7733</strong> for inquiries!</p>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $('#menu').slicknav();
+        });
+    </script>
+</body>
+</html>
