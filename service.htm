@@ -5,10 +5,11 @@
     <title>Sol's Bike Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/slicknav.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/jquery.slicknav.min.js"></script>
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/slicknav.css"> <!-- SlickNav CSS -->
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/slicknav@1.0.0/dist/slicknav.min.js"></script> <!-- SlickNav JS -->
+    <script src="scripts/main.js" defer></script> <!-- Your custom JS -->
 </head>
 <body>
     <header>
@@ -25,6 +26,7 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <h2>Our Bike Services</h2>
         <p>We offer expert bike services to keep your ride in top condition. Whether you need a quick tune-up or a full repair, our experienced technicians are here to help.</p>
@@ -38,9 +40,12 @@
         <h2>Why Choose Us?</h2>
         <p>Our team provides high-quality service with expert advice, affordable pricing, and fast turnaround times.</p>
     </main>
+
     <footer>
         <p>Contact us at <strong>SolsBikeShop@Outlook.com</strong> or call <strong>618-773-7733</strong> for service inquiries!</p>
     </footer>
+
+    <!-- Initialize SlickNav -->
     <script>
         $(document).ready(function(){
             $('#menu').slicknav();
