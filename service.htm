@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/slicknav.css"> <!-- SlickNav CSS -->
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
-    <script src="scripts/jquery.slicknav.min.js" defer></script> <!-- SlickNav JS -->
-    <script src="scripts/main.js" defer></script> <!-- Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slicknav@1.0.0/dist/slicknav.min.js"></script> <!-- SlickNav JS -->
+    <script src="scripts/main.js" defer></script> <!-- Your custom JS -->
 </head>
 <body>
     <header>
@@ -47,9 +48,8 @@
     <!-- Initialize SlickNav -->
     <script>
         $(document).ready(function(){
-            $('#menu').slicknav();  // Initialize SlickNav on the menu
+            $('#menu').slicknav();
         });
     </script>
 </body>
 </html>
-
