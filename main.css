@@ -20,8 +20,14 @@ body {
 }
 
 /* Styling for each bike category section (Street Bikes and Mountain Bikes) */
+.bike-categories {
+  display: flex; /* Align the two categories side by side */
+  justify-content: space-between;
+  width: 100%;
+}
+
 .bike-category {
-  flex: 1 1 45%; /* Each category takes up 45% of the width, and they wrap to next line if needed */
+  flex: 1 1 45%; /* Each category takes up 45% of the width */
   margin: 10px;
 }
 
@@ -129,35 +135,11 @@ footer {
     flex-direction: column; /* Stack categories vertically on smaller screens */
   }
 
+  .bike-categories {
+    flex-direction: column; /* Stack categories vertically on smaller screens */
+  }
+
   .bike-category {
-    width: 100%; /* Make each category take full width */
-    margin-bottom: 20px;
-  }
-
-  .right-column {
-    width: 100%; /* Make the rental agreement take full width */
-  }
-}
-
-/* Mobile adjustments for text and button sizes */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 2em;
-  }
-
-  nav ul li a {
-    font-size: 1em;
-  }
-
-  .bike h4 {
-    font-size: 1em;
-  }
-
-  .bike p {
-    font-size: 0.9em;
-  }
-
-  .right-column h2 {
-    font-size: 1.2em;
+    flex: 1 1 100%; /* Make each category take full width on smaller screens */
   }
 }
