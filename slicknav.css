@@ -1,0 +1,73 @@
+/* General SlickNav styles */
+.slicknav_nav {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slicknav_menu {
+  display: block;
+}
+
+.slicknav_btn {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.slicknav_btn:hover {
+  background-color: #444;
+}
+
+.slicknav_icon {
+  display: block;
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  transition: 0.3s;
+}
+
+.slicknav_icon:before,
+.slicknav_icon:after {
+  content: "";
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  transition: 0.3s;
+}
+
+.slicknav_nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.slicknav_nav a:hover {
+  background-color: #eee;
+}
+
+.slicknav_nav li:last-child a {
+  border-bottom: 1px solid #ddd;
+}
+
+.slicknav_nav li {
+  margin: 0;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .slicknav_nav {
+    display: block;
+  }
+}
