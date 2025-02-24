@@ -7,74 +7,29 @@
 
 /* Basic styling for body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 /* Container that holds the main content */
 .container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap */
-  justify-content: space-between; /* Distribute space between elements */
-  padding: 10px;
-}
-
-/* Styling for each bike category section (Street Bikes and Mountain Bikes) */
-.bike-categories {
-  display: flex; /* Align the two categories side by side */
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.bike-category {
-  flex: 1 1 45%; /* Each category takes up 45% of the width */
-  margin: 10px;
-}
-
-.bike {
-  background-color: #f4f4f4;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.bike h4 {
-  font-size: 1.2em;
-  color: #333;
-}
-
-.bike p {
-  color: #555;
-}
-
-/* Styling for the rental agreement section */
-.right-column {
-  flex: 1 1 45%;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.right-column h2 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-
-.right-column p {
-  margin-bottom: 8px;
-  color: #333;
-}
-
-/* Styling for the header */
+/* Header styling */
 header {
   text-align: center;
-  padding: 20px;
-  background-color: #333;
+  padding: 30px 20px;
+  background-color: #007BFF;
   color: white;
+  border-bottom: 2px solid #0056b3;
 }
 
 header img {
@@ -82,24 +37,26 @@ header img {
 }
 
 header h1 {
-  display: inline;
-  font-size: 2.5em;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 header h2 {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-style: italic;
   margin-top: 10px;
 }
 
-/* Styling for the navigation menu */
+/* Navigation styling */
 nav {
-  background-color: #444;
+  background-color: #0056b3;
   text-align: center;
+  padding: 10px;
 }
 
 nav ul {
   list-style-type: none;
-  padding: 10px;
+  padding: 0;
 }
 
 nav ul li {
@@ -110,12 +67,83 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
-/* Add hover effect on menu items */
 nav ul li a:hover {
   color: #ff6600;
+}
+
+/* Rental Info section styling */
+.rentals-info h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bike-categories {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bike-category {
+  flex: 1 1 45%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bike-category h3 {
+  color: #0056b3;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.bike {
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bike h4 {
+  font-size: 1.6em;
+  color: #007BFF;
+}
+
+.bike p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* Rental Terms section */
+.rental-terms {
+  flex: 1 1 45%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rental-terms h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.rental-terms ul {
+  list-style-type: none;
+}
+
+.rental-terms li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
 /* Footer styling */
@@ -123,48 +151,67 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 15px;
-  position: fixed;
+  padding: 20px;
+  position: relative;
   width: 100%;
-  bottom: 0;
+}
+
+footer p {
+  font-size: 1.1em;
 }
 
 /* Make the layout responsive for smaller screens */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack the columns vertically on smaller screens */
+    flex-direction: column;
+    padding: 10px;
   }
 
   .bike-categories {
-    flex-direction: column; /* Stack the categories vertically */
+    flex-direction: column;
+    gap: 15px;
   }
 
   .bike-category {
-    flex: 1 1 100%; /* Make each category take full width */
-    margin-bottom: 20px; /* Add margin to separate sections */
+    flex: 1 1 100%;
+    margin-bottom: 15px;
   }
 
-  .right-column {
-    flex: 1 1 100%; /* Make the right column take full width */
-    margin-top: 20px; /* Space it out from the bikes section */
+  .rental-terms {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header h2 {
+    font-size: 1.3em;
+  }
+
+  footer p {
+    font-size: 1em;
   }
 }
 
+/* Additional adjustments for mobile view */
 @media (max-width: 480px) {
-  header h1 {
-    font-size: 2em; /* Adjust font size for very small screens */
-  }
-
   nav ul li {
-    display: block; /* Stack menu items vertically on small screens */
+    display: block;
     margin-bottom: 10px;
   }
 
   nav ul li a {
-    font-size: 1em; /* Reduce the font size for smaller screens */
+    font-size: 1em;
   }
 
-  footer {
-    font-size: 0.8em; /* Adjust footer text size for smaller screens */
+  .bike-category h3,
+  .bike h4 {
+    font-size: 1.4em;
+  }
+
+  .rental-terms h2 {
+    font-size: 1.6em;
   }
 }
