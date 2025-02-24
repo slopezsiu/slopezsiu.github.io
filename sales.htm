@@ -2,49 +2,82 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <title>Sol's Bike Sales</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/slicknav.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts/jquery.slicknav.min.js"></script>
-    <script src="scripts/main.js" defer></script>
+    <title>Sol's Bike Sales</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css"> <!-- Your custom CSS -->
+    <link rel="stylesheet" href="styles/slicknav.css"> <!-- SlickNav CSS -->
+
+    <!-- jQuery & SlickNav -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/slicknav@1.0.0/dist/slicknav.min.js"></script> 
+
+    <script>
+        $(document).ready(function() {
+            if (typeof $.fn.slicknav !== "undefined") {
+                $('#menu').slicknav({prependTo: "nav"});
+            } else {
+                console.error("SlickNav failed to load.");
+            }
+        });
+    </script>
 </head>
+
 <body>
     <header>
         <img src="images/surfboardbikeshop.png" alt="Bike Shop Logo" width="50">
-        <h1>Sol's Bicycle Sales</h1>
-        <h2>Find the perfect bike for your adventures!</h2>
-        <nav>
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="rentals.html">Rentals</a></li>
-                <li><a href="sales.html">Sales</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Sol's Bicycle Shop - Sales</h1>
+        <h2>Find the perfect bike for your needs!</h2>
     </header>
-    <main>
-        <h2>Our Bike Selection</h2>
-        <p>We offer a variety of bikes for all types of riders. Whether you're looking for a high-performance road bike or a sturdy mountain bike, we've got you covered!</p>
-        <ul>
-            <li><strong>Road Bikes:</strong> Lightweight and fast, ideal for long-distance riding.</li>
-            <li><strong>Mountain Bikes:</strong> Durable and rugged, perfect for off-road adventures.</li>
-            <li><strong>Hybrid Bikes:</strong> A balance between road and mountain bikes for versatility.</li>
-            <li><strong>Cruiser Bikes:</strong> Comfortable and stylish, great for casual rides.</li>
-            <li><strong>Kids' Bikes:</strong> Safe and fun bicycles for young riders.</li>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul id="menu">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="rentals.htm">Rentals</a></li>
+            <li><a href="sales.htm">Sales</a></li>
+            <li><a href="services.htm">Services</a></li>
+            <li><a href="contact.htm">Contact</a></li>
         </ul>
-        <h2>Why Buy from Us?</h2>
-        <p>All our bikes come with a satisfaction guarantee, professional assembly, and optional maintenance packages.</p>
+    </nav>
+
+    <main>
+        <h2>Available Bikes for Sale</h2>
+        <div class="container">
+            <div class="left-column">
+                <div class="bike">
+                    <h3>Mountain Bike</h3>
+                    <img src="images/mountain_bike.jpg" alt="Mountain Bike" width="200">
+                    <p>Perfect for off-road adventures. Durable and lightweight.</p>
+                    <p><strong>Price: $799.99</strong></p>
+                </div>
+                <div class="bike">
+                    <h3>Road Bike</h3>
+                    <img src="images/road_bike.jpg" alt="Road Bike" width="200">
+                    <p>Designed for speed on paved roads. Sleek and aerodynamic.</p>
+                    <p><strong>Price: $999.99</strong></p>
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="bike">
+                    <h3>Hybrid Bike</h3>
+                    <img src="images/hybrid_bike.jpg" alt="Hybrid Bike" width="200">
+                    <p>A perfect mix of road and mountain bikes for versatility.</p>
+                    <p><strong>Price: $599.99</strong></p>
+                </div>
+                <div class="bike">
+                    <h3>BMX Bike</h3>
+                    <img src="images/bmx_bike.jpg" alt="BMX Bike" width="200">
+                    <p>Great for tricks and stunts. Built tough for high performance.</p>
+                    <p><strong>Price: $449.99</strong></p>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>Contact us at <strong>SolsBikeShop@Outlook.com</strong> or call <strong>618-773-7733</strong> for inquiries!</p>
+        <p>Contact us at <strong>SolsBikeShop@Outlook.com</strong> or call <strong>618-773-7733</strong></p>
     </footer>
-    <script>
-        $(document).ready(function(){
-            $('#menu').slicknav();
-        });
-    </script>
 </body>
 </html>
