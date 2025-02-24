@@ -24,6 +24,7 @@ body {
   display: flex; /* Align the two categories side by side */
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .bike-category {
@@ -31,7 +32,6 @@ body {
   margin: 10px;
 }
 
-/* Styling for individual bikes */
 .bike {
   background-color: #f4f4f4;
   padding: 15px;
@@ -132,14 +132,39 @@ footer {
 /* Make the layout responsive for smaller screens */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column; /* Stack categories vertically on smaller screens */
+    flex-direction: column; /* Stack the columns vertically on smaller screens */
   }
 
   .bike-categories {
-    flex-direction: column; /* Stack categories vertically on smaller screens */
+    flex-direction: column; /* Stack the categories vertically */
   }
 
   .bike-category {
-    flex: 1 1 100%; /* Make each category take full width on smaller screens */
+    flex: 1 1 100%; /* Make each category take full width */
+    margin-bottom: 20px; /* Add margin to separate sections */
+  }
+
+  .right-column {
+    flex: 1 1 100%; /* Make the right column take full width */
+    margin-top: 20px; /* Space it out from the bikes section */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em; /* Adjust font size for very small screens */
+  }
+
+  nav ul li {
+    display: block; /* Stack menu items vertically on small screens */
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    font-size: 1em; /* Reduce the font size for smaller screens */
+  }
+
+  footer {
+    font-size: 0.8em; /* Adjust footer text size for smaller screens */
   }
 }
