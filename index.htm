@@ -2,11 +2,15 @@
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sol's Bike Website</title>
 
+    <!-- SEO & Favicon -->
+    <meta name="description" content="Sol's Bicycle Shop - Your go-to place for bike sales, rentals, and repairs!">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css"> <!-- Your custom CSS -->
+    <link rel="stylesheet" href="styles/main.css"> <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/slicknav.css"> <!-- SlickNav CSS -->
 
     <!-- jQuery & SlickNav -->
@@ -15,8 +19,8 @@
 
     <script>
         $(document).ready(function() {
-            if (typeof $.fn.slicknav !== "undefined") {
-                $('#menu').slicknav({prependTo: "nav"}); // Make sure it works in a mobile-friendly way
+            if ($.fn.slicknav) {
+                $('#menu').slicknav({prependTo: "header"}); // Ensures mobile-friendly menu
             } else {
                 console.error("SlickNav failed to load.");
             }
@@ -26,7 +30,7 @@
 
 <body>
     <header>
-        <img src="images/surfboardbikeshop.png" alt="Bike Shop Logo" width="50">
+        <img src="images/surfboardbikeshop.png" alt="Sol's Bike Shop Logo" width="50">
         <h1>Sol's Bicycle Shop</h1>
         <h2>Come on down to our shop for all of your bicycle and surf needs!</h2>
     </header>
@@ -53,7 +57,8 @@
     </main>
 
     <footer>
-        <p>Contact us at <strong>SolsBikeShop@Outlook.com</strong> or call <strong>618-773-7733</strong></p>
+        <p>Contact us at <strong><a href="mailto:SolsBikeShop@Outlook.com">SolsBikeShop@Outlook.com</a></strong> 
+           or call <strong><a href="tel:6187737733">618-773-7733</a></strong></p>
     </footer>
 </body>
 </html>
