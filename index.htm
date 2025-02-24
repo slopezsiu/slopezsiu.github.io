@@ -18,7 +18,7 @@
     <script src="js/jquery.slicknav.min.js"></script> 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#menu').slicknav({ prependTo: "header" }); // Ensures mobile-friendly menu
+           $('#nav_menu').slicknav({prependTo:"#mobile_menu"}); 
         });
     </script>
 
@@ -36,7 +36,8 @@
     </header>
 
     <!-- Navigation Menu -->
-    <nav id="menu">
+    <nav id="mobile_menu"></nav>
+    <nav id="nav_menu">
         <ul>
             <li><a href="index.htm" class="current">Home</a></li>
             <li><a href="rentals.htm">Rentals</a></li>
