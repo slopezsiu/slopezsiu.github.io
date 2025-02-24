@@ -1,9 +1,8 @@
 /* Author: Sol Lopez 
-    SIU ITEC
-    Date Dev: 2/2/2025
-    Date Tested: 2/2/2025
-    Comment header for my website -->
-*/
+   SIU ITEC
+   Date Dev: 2/2/2025
+   Date Tested: 2/2/2025
+   Comment header for my website */
 
 /* #3 + #6 */
 body {
@@ -11,142 +10,68 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: yellow;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* #4 */
 h1,h2,h3,h4 {
-
     padding: 10px;
     font-size: 1.5em;
     text-align: center;
-    
 }
 
 /* #5 */
 p {
-
     padding-left: 10px;
     padding-right: 10px;
     line-height: 1.6;
-
 }
 
 /* #7 */
 ul li {
-
     padding-left: 10px;
     margin-bottom: 5px;
-
 }
 
 /* #8  */
 img[src="images/surfboardbikeshop.png"] {
-
     border: 2px solid blue;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
-    
 }
 
 /* #9 */
 img {
-    
     position: relative;
     top: 10px;
     left: 10px;
-
 }
 
+/* Main container styling */
 .container {
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 10px auto;
+    padding: 10px;
     max-width: 100%;
-    margin: 10px auto; 
-    
+    box-sizing: border-box;
+}
+
+.left-column,
+.right-column {
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .left-column {
-    
     flex: 1 1 48%;
-    padding: 10px;
-    box-sizing: border-box;
-    
+    background-color: #f4f4f4;  /* Lighter background */
 }
+
 .right-column {
-    
     flex: 1 1 48%;
-    padding: 10px;
-    background-color: #f9f9f9; /* Background for contrast */
-    border-left: 2px solid #ccc;
-    box-sizing: border-box;
-
-}
-
-.bike {
-    
-    background-color: #e3f2fd;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-@media (max-width: 1024px) {
-    
-    .container {
-        
-        flex-direction: column;
-        padding: 0 10px;
-
-    }
-    
-    .left-column, .right-column {
-        
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 768px) { 
-    /* Further adjustments for smaller devices like mobile */
-    h1 {
-        font-size: 1.6em;
-    }
-
-    h2,h3,h4,{
-        font-size: 1.4em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    .container {
-        padding: 0 5px; 
-    }
-}
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.4em;
-    }
-
-    h2, h3, h4 {
-        font-size: 1.2em;
-    }
-
-    p {
-        font-size: 0.9em;
-    }
-
-    .container {
-        padding: 0 5px;
-        display: block; /* Ensures no wrapping issue */
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-}
+    background-color: #f9f9f9;
+    border-l
