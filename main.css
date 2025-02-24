@@ -74,4 +74,72 @@ img {
 .right-column {
     flex: 1 1 48%;
     background-color: #f9f9f9;
-    border-l
+    border-left: 2px solid #ccc;
+}
+
+/* Bike styling */
+.bike {
+    background-color: #e3f2fd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Responsive Layout with Media Queries */
+
+/* For tablets and smaller (1024px) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* For mobile devices (768px and smaller) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2,h3,h4 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}
+
+/* For very small mobile screens (480px and smaller) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4em;
+    }
+
+    h2,h3,h4 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 0 5px;
+        display: block;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
