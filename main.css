@@ -1,3 +1,5 @@
+/* @author Your Name, Your Company CSS Style Page Developed: [Date] Tested: [Date] */
+
 /* Global styles */
 body {
     margin: 0;
@@ -66,33 +68,80 @@ img[src="images/surfboardbikeshop.png"] {
 }
 
 /* Media queries for responsive layout */
-@media (max-width: 1024px) {
+
+/* tablet landscape and desktop layout (960px or more) */
+@media only screen and (min-width: 960px) {
+    /* Container layout */
+    .container {
+        flex-direction: row;
+    }
+
+    /* Left and right columns */
+    .left-column, .right-column {
+        width: 48%;
+    }
+
+    /* Heading and paragraph sizes */
+    h1 {
+        font-size: 2.5em;
+    }
+    h2, h3, h4 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+
+/* tablet portrait layout (741px to 959px) */
+@media only screen and (max-width: 959px) {
     .container {
         flex-direction: column;
         padding: 0 10px;
     }
+
     .left-column, .right-column {
         width: 100%;
         margin-bottom: 20px;
     }
-}
 
-@media (max-width: 768px) {
+    /* Heading and paragraph sizes */
     h1 {
-        font-size: 1.6em;
+        font-size: 2em;
     }
     h2, h3, h4 {
-        font-size: 1.4em;
+        font-size: 1.6em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+}
+
+/* mobile landscape layout (480px to 740px) */
+@media only screen and (max-width: 740px) {
+    h1 {
+        font-size: 1.75em;
+    }
+    h2, h3, h4 {
+        font-size: 1.5em;
     }
     p {
         font-size: 1em;
     }
+
     .container {
         padding: 0 5px;
+        display: block;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 15px;
     }
 }
 
-@media (max-width: 480px) {
+/* mobile portrait layout (479px or less) */
+@media only screen and (max-width: 479px) {
     h1 {
         font-size: 1.4em;
     }
@@ -102,12 +151,37 @@ img[src="images/surfboardbikeshop.png"] {
     p {
         font-size: 0.9em;
     }
+
     .container {
         padding: 0 5px;
         display: block;
     }
+
     .left-column, .right-column {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+/* mobile smallest screens (320px and below) */
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.3em;
+    }
+    h2, h3, h4 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 0.85em;
+    }
+
+    .container {
+        padding: 0 5px;
+        display: block;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
