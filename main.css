@@ -1,138 +1,163 @@
-/* Author: Sol Lopez 
-    SIU ITEC
-    Date Dev: 2/2/2025
-    Date Tested: 2/2/2025
-    Comment header for my website */
+/* Resetting margins and padding for a clean slate */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Global styles */
+/* Basic styling for body */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: yellow;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    padding: 10px;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-p {
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 1.6;
-}
-
-ul li {
-    padding-left: 10px;
-    margin-bottom: 5px;
-}
-
-/* Styling for images */
-img[src="images/surfboardbikeshop.png"] {
-    border: 2px solid blue;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-}
-
-img {
-    position: relative;
-    top: 10px;
-    left: 10px;
-}
-
-/* Container for the main content, flexible for all screen sizes */
+/* Container that holds the main content */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 100%;
-    margin: 10px auto;
-    padding: 0 10px;  /* Add some padding for smaller screens */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-between; /* Distribute space between elements */
+  padding: 10px;
 }
 
-/* Left and right columns */
-.left-column, .right-column {
-    flex: 1 1 48%;  /* Flexbox properties to allow flexible widths */
-    padding: 10px;
-    box-sizing: border-box;
+/* Styling for each bike category section (Street Bikes and Mountain Bikes) */
+.bike-category {
+  flex: 1 1 45%; /* Each category takes up 45% of the width, and they wrap to next line if needed */
+  margin: 10px;
 }
 
-/* Right column with background for contrast */
-.right-column {
-    background-color: #f9f9f9;
-    border-left: 2px solid #ccc;
-}
-
-/* Styling for the bike section */
+/* Styling for individual bikes */
 .bike {
-    background-color: #e3f2fd;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-/* Responsive breakpoints */
-@media (max-width: 1024px) {
-    /* For tablets and medium screens */
-    .container {
-        padding: 0 10px; /* Add padding for better spacing */
-    }
-    
-    .left-column, .right-column {
-        width: 100%;  /* Full-width for smaller screens */
-        margin-bottom: 20px; /* Space between sections */
-    }
+.bike h4 {
+  font-size: 1.2em;
+  color: #333;
 }
 
-@media (max-width: 768px) { 
-    /* For tablets and smaller devices */
-    h1 {
-        font-size: 1.6em;
-    }
-
-    h2, h3, h4 {
-        font-size: 1.4em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    /* Ensure the container and columns adjust */
-    .container {
-        padding: 0 5px;
-    }
-
-    .left-column, .right-column {
-        width: 100%;  /* Full-width */
-    }
+.bike p {
+  color: #555;
 }
 
+/* Styling for the rental agreement section */
+.right-column {
+  flex: 1 1 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.right-column h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.right-column p {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Styling for the header */
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+header img {
+  margin-right: 10px;
+}
+
+header h1 {
+  display: inline;
+  font-size: 2.5em;
+}
+
+header h2 {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Styling for the navigation menu */
+nav {
+  background-color: #444;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+/* Add hover effect on menu items */
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Make the layout responsive for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack categories vertically on smaller screens */
+  }
+
+  .bike-category {
+    width: 100%; /* Make each category take full width */
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    width: 100%; /* Make the rental agreement take full width */
+  }
+}
+
+/* Mobile adjustments for text and button sizes */
 @media (max-width: 480px) {
-    /* For mobile devices */
-    h1 {
-        font-size: 1.4em;
-    }
+  header h1 {
+    font-size: 2em;
+  }
 
-    h2, h3, h4 {
-        font-size: 1.2em;
-    }
+  nav ul li a {
+    font-size: 1em;
+  }
 
-    p {
-        font-size: 0.9em;
-    }
+  .bike h4 {
+    font-size: 1em;
+  }
 
-    /* Ensure no wrapping issues */
-    .container {
-        padding: 0 5px;
-        display: block;
-    }
+  .bike p {
+    font-size: 0.9em;
+  }
 
-    .left-column, .right-column {
-        width: 100%; /* Full-width columns on mobile */
-        margin-bottom: 15px; /* Space between sections */
-    }
+  .right-column h2 {
+    font-size: 1.2em;
+  }
 }
