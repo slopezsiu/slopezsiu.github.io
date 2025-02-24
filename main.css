@@ -1,40 +1,35 @@
 /* Author: Sol Lopez 
-   SIU ITEC
-   Date Dev: 2/2/2025
-   Date Tested: 2/2/2025
-   Comment header for my website */
+    SIU ITEC
+    Date Dev: 2/2/2025
+    Date Tested: 2/2/2025
+    Comment header for my website */
 
-/* #3 + #6 */
+/* Global styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: yellow;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
-/* #4 */
-h1,h2,h3,h4 {
+h1, h2, h3, h4 {
     padding: 10px;
     font-size: 1.5em;
     text-align: center;
 }
 
-/* #5 */
 p {
     padding-left: 10px;
     padding-right: 10px;
     line-height: 1.6;
 }
 
-/* #7 */
 ul li {
     padding-left: 10px;
     margin-bottom: 5px;
 }
 
-/* #8  */
+/* Styling for images */
 img[src="images/surfboardbikeshop.png"] {
     border: 2px solid blue;
     border-radius: 10px;
@@ -42,42 +37,36 @@ img[src="images/surfboardbikeshop.png"] {
     margin: 0 auto;
 }
 
-/* #9 */
 img {
     position: relative;
     top: 10px;
     left: 10px;
 }
 
-/* Main container styling */
+/* Container for the main content, flexible for all screen sizes */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px auto;
-    padding: 10px;
     max-width: 100%;
-    box-sizing: border-box;
+    margin: 10px auto;
+    padding: 0 10px;  /* Add some padding for smaller screens */
 }
 
-.left-column,
-.right-column {
+/* Left and right columns */
+.left-column, .right-column {
+    flex: 1 1 48%;  /* Flexbox properties to allow flexible widths */
     padding: 10px;
     box-sizing: border-box;
 }
 
-.left-column {
-    flex: 1 1 48%;
-    background-color: #f4f4f4;  /* Lighter background */
-}
-
+/* Right column with background for contrast */
 .right-column {
-    flex: 1 1 48%;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
 }
 
-/* Bike styling */
+/* Styling for the bike section */
 .bike {
     background-color: #e3f2fd;
     padding: 10px;
@@ -85,28 +74,26 @@ img {
     border-radius: 8px;
 }
 
-/* Responsive Layout with Media Queries */
-
-/* For tablets and smaller (1024px) */
+/* Responsive breakpoints */
 @media (max-width: 1024px) {
+    /* For tablets and medium screens */
     .container {
-        flex-direction: column;
-        padding: 0 10px;
+        padding: 0 10px; /* Add padding for better spacing */
     }
-
+    
     .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%;  /* Full-width for smaller screens */
+        margin-bottom: 20px; /* Space between sections */
     }
 }
 
-/* For mobile devices (768px and smaller) */
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+    /* For tablets and smaller devices */
     h1 {
         font-size: 1.6em;
     }
 
-    h2,h3,h4 {
+    h2, h3, h4 {
         font-size: 1.4em;
     }
 
@@ -114,18 +101,23 @@ img {
         font-size: 1em;
     }
 
+    /* Ensure the container and columns adjust */
     .container {
         padding: 0 5px;
     }
+
+    .left-column, .right-column {
+        width: 100%;  /* Full-width */
+    }
 }
 
-/* For very small mobile screens (480px and smaller) */
 @media (max-width: 480px) {
+    /* For mobile devices */
     h1 {
         font-size: 1.4em;
     }
 
-    h2,h3,h4 {
+    h2, h3, h4 {
         font-size: 1.2em;
     }
 
@@ -133,13 +125,14 @@ img {
         font-size: 0.9em;
     }
 
+    /* Ensure no wrapping issues */
     .container {
         padding: 0 5px;
         display: block;
     }
 
     .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 15px;
+        width: 100%; /* Full-width columns on mobile */
+        margin-bottom: 15px; /* Space between sections */
     }
 }
