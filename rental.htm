@@ -19,7 +19,7 @@
     <script src="js/jquery.slicknav.min.js"></script> 
     <script type="text/javascript">
         $(document).ready(function(){
-            $('#menu').slicknav(); // Initialize SlickNav
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
         });
     </script>
 </head>
@@ -34,8 +34,9 @@
         <h2>Rental Guide Below</h2>
 
         <!-- Navigation Menu -->
-        <nav>
-            <ul id="menu">
+        <nav id="mobile_menu"></nav> 
+        <nav id="nav_menu">
+            <ul>
                 <li><a href="index.htm">Home</a></li>
                 <li><a href="rentals.htm" class="current">Rentals</a></li>
                 <li><a href="sales.htm">Sales</a></li>
