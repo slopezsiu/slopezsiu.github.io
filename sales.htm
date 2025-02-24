@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+     <meta charset="utf-8">
+     <title>Sol's Bike Website - Sales</title>
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="styles/slicknav.css"> <!-- Add SlickNav CSS -->
+     <meta name="description" content="A small bike shop with many different brands of bikes"> 
+     <meta name="keywords" content="bike, bicycle, surf, surfboard, shop, family">
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
+     <script src="scripts/jquery.slicknav.min.js"></script> <!-- Add SlickNav script -->
+     <script src="scripts/main.js" defer></script> <!-- Your custom JS -->
+  </head>
+  <body>
+    <header>
+      <img src="images/surfboardbikeshop.png" alt="Bike Shop Logo" width="50">
+      <h1>Sol's Bicycle Shop</h1>
+      <h2>Find the best deals on bikes and accessories here!</h2>
+      <p>Explore our selection of top-quality bicycles, surfboards, and accessories. Whether you're a beginner or a pro, we have something for everyone!</p>
+
+      <!-- SlickNav Menu -->
+      <nav>
+        <ul id="menu">
+            <li><a href="index.htm">Home</a></li>
+            <li><a href="rentals.htm">Rentals</a></li>
+            <li><a href="sales.htm">Sales</a></li>
+            <li><a href="services.htm">Services</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Check out our selection of bicycles and accessories for sale!</h2>
+      
+      <p><strong>We offer a wide variety of bikes for every rider:</strong></p>
+      <ul>
+        <li><strong>Road Bikes:</strong> Speed and agility for smooth rides on paved roads.</li>
+        <li><strong>Mountain Bikes:</strong> Built for off-road adventures, with durable frames and suspension.</li>
+        <li><strong>Hybrid Bikes:</strong> The perfect balance of road and mountain bike features.</li>
+        <li><strong>Kids' Bikes:</strong> Safe and fun bikes designed for younger riders.</li>
+        <li><strong>Custom Bikes:</strong> Build your dream bike with our expert assistance.</li>
+        <li><strong>Bike Accessories:</strong> Helmets, lights, locks, racks, and more!</li>
+      </ul>
+
+      <h2>We also have surfboards for sale!</h2>
+      <p>If you're looking to hit the waves, we have a wide selection of surfboards for all skill levels.</p>
+      <p><q>Life is like riding a bicycle. To keep your balance, you must keep moving</q> - <em>Albert Einstein</em></p>
+      <p>Our contact information and address can be found below!</p>
+    </main>
+
+    <pre>
+      Store Address: Sol's Bicycle Shop, 773 Cycling Ln, Chicago, IL 62901
+      Contact Name: Sol Lopez
+      Phone Number: 618-773-7733
+      Business Email: SolsBikeShop@Outlook.com
+    </pre>
+
+    <script>
+        $(document).ready(function(){
+            $('#menu').slicknav();  // Initialize the SlickNav menu
+        });
+    </script>
+  </body>
+</html>
