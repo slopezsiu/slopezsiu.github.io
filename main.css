@@ -1,187 +1,114 @@
-/* @author Your Name, Your Company CSS Style Page Developed: [Date] Tested: [Date] */
-
-/* Global styles */
-body {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: yellow;
+    box-sizing: border-box;
 }
 
-/* Heading styles */
-h1, h2, h3, h4 {
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+header .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+header img {
+    width: 50px;
+    height: auto;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #444;
     padding: 10px;
-    font-size: 1.5em;
+}
+
+nav ul {
+    list-style-type: none;
     text-align: center;
 }
 
-/* Paragraph styles */
-p {
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 1.6;
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
-/* Unordered list styles */
-ul li {
-    padding-left: 10px;
-    margin-bottom: 5px;
-}
-
-/* Image styles */
-img[src="images/surfboardbikeshop.png"] {
-    border: 2px solid blue;
-    border-radius: 10px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Main container styles */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 100%;
-    margin: 10px auto;
-}
-
-/* Left and Right column styles */
-.left-column {
-    flex: 1 1 48%;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
     padding: 10px;
-    box-sizing: border-box;
-}
-.right-column {
-    flex: 1 1 48%;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-left: 2px solid #ccc;
-    box-sizing: border-box;
+    transition: background-color 0.3s;
 }
 
-/* Bike item styles */
-.bike {
-    background-color: #e3f2fd;
-    padding: 10px;
+nav ul li a:hover, nav ul li a.current {
+    background-color: #f4a261;
+    border-radius: 5px;
+}
+
+/* Mobile Menu */
+#mobile_menu {
+    display: none;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main ul li {
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    border-radius: 8px;
 }
 
-/* Media queries for responsive layout */
-
-/* tablet landscape and desktop layout (960px or more) */
-@media only screen and (min-width: 960px) {
-    /* Container layout */
-    .container {
-        flex-direction: row;
-    }
-
-    /* Left and right columns */
-    .left-column, .right-column {
-        width: 48%;
-    }
-
-    /* Heading and paragraph sizes */
-    h1 {
-        font-size: 2.5em;
-    }
-    h2, h3, h4 {
-        font-size: 1.8em;
-    }
-    p {
-        font-size: 1.2em;
-    }
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-/* tablet portrait layout (741px to 959px) */
-@media only screen and (max-width: 959px) {
-    .container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* Heading and paragraph sizes */
-    h1 {
-        font-size: 2em;
-    }
-    h2, h3, h4 {
-        font-size: 1.6em;
-    }
-    p {
-        font-size: 1.1em;
-    }
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
-/* mobile landscape layout (480px to 740px) */
-@media only screen and (max-width: 740px) {
-    h1 {
-        font-size: 1.75em;
-    }
-    h2, h3, h4 {
-        font-size: 1.5em;
-    }
-    p {
-        font-size: 1em;
-    }
-
-    .container {
-        padding: 0 5px;
-        display: block;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-}
-
-/* mobile portrait layout (479px or less) */
-@media only screen and (max-width: 479px) {
-    h1 {
-        font-size: 1.4em;
-    }
-    h2, h3, h4 {
-        font-size: 1.2em;
-    }
-    p {
-        font-size: 0.9em;
-    }
-
-    .container {
-        padding: 0 5px;
-        display: block;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-/* mobile smallest screens (320px and below) */
-@media only screen and (max-width: 320px) {
-    h1 {
-        font-size: 1.3em;
-    }
-    h2, h3, h4 {
-        font-size: 1em;
-    }
-    p {
-        font-size: 0.85em;
-    }
-
-    .container {
-        padding: 0 5px;
-        display: block;
-    }
-
-    .left-column, .right-column {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+footer a:hover {
+    text-decoration: underline;
 }
