@@ -19,11 +19,7 @@
 
     <script>
         $(document).ready(function() {
-            if ($.fn.slicknav) {
-                $('#menu').slicknav({prependTo: "header"}); // Ensures mobile-friendly menu
-            } else {
-                console.error("SlickNav failed to load.");
-            }
+            $('#menu').slicknav({ prependTo: "header" }); // Ensures mobile-friendly menu
         });
     </script>
 </head>
