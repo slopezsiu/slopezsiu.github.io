@@ -1,47 +1,60 @@
 <!DOCTYPE html>
+<!-- @author Sol Lopez, Sol's Bicycle Shop Index Page
+Developed: 02-23-2025  Tested: 02-23-2025
+No errors on https://validator.w3.org/ or http://jigsaw.w3.org/css-validator/
+* SlickNav Responsive Mobile Menu v1.0.0
+* (c) 2025 Sol Lopez
+-->
 <html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol's Bike Website</title>
+    <title>Sol's Bike Website</title> 
 
     <!-- SEO & Favicon -->
     <meta name="description" content="Sol's Bicycle Shop - Your go-to place for bike sales, rentals, and repairs!">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css"> <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/slicknav.css"> <!-- SlickNav CSS -->
+    <link rel="stylesheet" href="main.css"> <!-- Custom CSS -->
+    <link rel="stylesheet" href="slicknav.css"> <!-- SlickNav CSS -->
 
     <!-- jQuery & SlickNav -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/slicknav@1.0.0/dist/slicknav.min.js"></script> 
-
-    <script>
+    <script type="text/javascript">
         $(document).ready(function() {
             $('#menu').slicknav({ prependTo: "header" }); // Ensures mobile-friendly menu
         });
     </script>
+
+    <meta name="description" content="Sol's Bicycle Shop - Your go-to place for bike sales, rentals, and repairs!">
+    <meta name="keywords" content="bikes, bicycle, rentals, sales, services, repairs, shop">
 </head>
 
 <body>
+    <!-- Header -->
     <header>
-        <img src="images/surfboardbikeshop.png" alt="Sol's Bike Shop Logo" width="50">
+        <figure class="logo">
+            <img src="images/surfboardbikeshop.png" alt="Sol's Bike Shop Logo" width="50">
+        </figure>
         <h1>Sol's Bicycle Shop</h1>
         <h2>Come on down to our shop for all of your bicycle and surf needs!</h2>
     </header>
 
     <!-- Navigation Menu -->
-    <nav>
-        <ul id="menu">
-            <li><a href="index.htm">Home</a></li>
-            <li><a href="rentals.htm">Rentals</a></li>
-            <li><a href="sales.htm">Sales</a></li>
-            <li><a href="services.htm">Services</a></li>
-            <li><a href="contact.htm">Contact</a></li>
+    <nav id="mobile_menu"></nav>
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="rentals.html">Rentals</a></li>
+            <li><a href="sales.html">Sales</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="lastitem">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- Main Content -->
     <main>
         <h2>We have you covered for all things related to bicycles!</h2>
         <p><strong>Services and products we provide are listed below:</strong></p>
@@ -52,9 +65,11 @@
         </ul>
     </main>
 
+    <!-- Footer -->
     <footer>
         <p>Contact us at <strong><a href="mailto:SolsBikeShop@Outlook.com">SolsBikeShop@Outlook.com</a></strong> 
            or call <strong><a href="tel:6187737733">618-773-7733</a></strong></p>
     </footer>
+
 </body>
 </html>
