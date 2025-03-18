@@ -46,14 +46,48 @@ header h2 {
   margin-top: 10px;
 }
 
-#image1 {
-    background-image: url("images/maingraphic.jpg")
-    width: 434px;
-    height: 312px;
+/* class for image with rounded corners and hover over trqansition */
+.cute {
+    width: 99%;
+    min-width: 200px;
+    max-width: 370px;
+    position: relative;	
+	margin:  -0 auto;
+	max-width: 435px;
+    height: 264px;
+   
 }
 
-#image1:hover{
-    background-image: url("images/secondgraphic.jpg")
+/*  hover over and  GRAY touch on banner */
+/* burned in */
+.cute img {
+    
+    width: 99%;
+    min-width: 200px;
+    max-width: 350px;
+    position: absolute;	
+	overflow: hidden;
+    border: 3px solid #363A3D;
+    border-radius: 90px;
+    margin: 0;
+	opacity: 1;
+    /* Sets the width and height for the images*/
+	height: 435px;
+    max-height: 264px;
+    
+}
+
+/*  fading effect. */
+
+.cute .cuter{
+  z-index: 9999;
+  transition: opacity 2s linear;
+  cursor: pointer;
+}
+
+/* burned in effect on 2nd image */
+.cute:hover > .cuter {
+  opacity: 0.1;
 }
 
 
