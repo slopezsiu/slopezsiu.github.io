@@ -47,13 +47,13 @@ header h2 {
 }
 
 #image1 {
-    background-image: url("images/maingraphic.jpg")
+    background-image: url("maingraphic.jpg")
     width: 434px;
     height: 312px;
 }
 
 #image1:hover{
-    background-image: url("images/secondgraphic.jpg")
+    background-image: url("secondgraphic.jpg")
 }
 
 
