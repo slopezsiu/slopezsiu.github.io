@@ -46,17 +46,14 @@ header h2 {
   margin-top: 10px;
 }
 
-/* Style for the main graphic */
-.main-graphic {
-    width: 10%; /* Adjust size as needed */
-    max-width: 50px; /* Set a maximum width */
-    border-radius: 15px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth transition when hovering */
+#image1 {
+    background-image: url("images/maingraphic.jpg")
+    width: 434px;
+    height: 312px;
 }
 
-/* Hover effect: Change image when mouse is over the main graphic */
-.main-graphic:hover {
-    content: url('images/secondgraphic.jpg');
+#image1:hover{
+    background-image: url("images/secondgraphic.jpg")
 }
 
 
