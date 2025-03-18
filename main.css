@@ -48,8 +48,8 @@ header h2 {
 
 #image1 {
     background-image: url("maingraphic.jpg")
-    width: 434px;
-    height: 312px;
+    width: 100px;
+    height: 50px;
 }
 
 #image1:hover{
