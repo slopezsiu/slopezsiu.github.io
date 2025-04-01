@@ -48,11 +48,11 @@ header h2 {
 
 /* class for image with rounded corners and hover over trqansition */
 .cute {
-    width: 99%;
-    min-width: 200px;
-    max-width: 370px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 435px;
     position: relative;	
-	margin:  -0 auto;
+	margin: 0 auto;
 	max-width: 435px;
     height: 264px;
    
@@ -62,12 +62,12 @@ header h2 {
 /* burned in */
 .cute img {
     
-    width: 99%;
-    min-width: 200px;
-    max-width: 350px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 435px;
     position: absolute;	
 	overflow: hidden;
-    border: 3px solid #363A3D;
+    border: 2px solid #363A3D;
     border-radius: 90px;
     margin: 0;
 	opacity: 1;
