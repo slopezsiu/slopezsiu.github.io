@@ -1,1 +1,94 @@
+/* print.css */
 
+/* General Print Styles */
+@media print {
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove background images and unnecessary elements */
+  header, footer, nav, .slicknav_menu {
+    display: none;
+  }
+
+  /* Header for printed page */
+  header {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  header img {
+    max-width: 150px;
+  }
+
+  /* Main content styling */
+  main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .intro {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+  .intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .intro p {
+    margin-bottom: 20px;
+  }
+
+  .intro ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .intro ul li {
+    margin-bottom: 10px;
+  }
+
+  .intro a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .intro a:hover {
+    text-decoration: underline;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8em;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  /* Pagination - if your site spans multiple pages */
+  .page-break {
+    page-break-before: always;
+  }
+}

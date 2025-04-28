@@ -1,0 +1,317 @@
+.project-img {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+.project-img:hover {
+  transform: scale(1.05);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+video {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="reset"] {
+  background-color: #f44336;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+/* styles.css */
+
+/* General Styles */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #007bff;
+}
+
+h1, h2, h3 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header .logo {
+  max-width: 150px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid #007bff;
+}
+
+/* Main Section Styles */
+main {
+  padding: 40px 20px;
+}
+
+.intro, .contact-section, .skills-section, .about-section, .projects-section, .resume-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.intro img, .profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0 auto;
+}
+
+.intro p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.intro ul {
+  padding-left: 20px;
+}
+
+.intro ul li {
+  margin-bottom: 10px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+button[type="reset"] {
+  background-color: #f44336;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Video */
+video {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header .logo {
+    max-width: 120px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-right: 0;
+  }
+
+  .intro, .contact-section, .skills-section, .about-section, .projects-section, .resume-section {
+    padding: 20px;
+  }
+
+  .contact-section form, .skills-section table {
+    width: 100%;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .intro h1 {
+    font-size: 2em;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+  }
+
+  header, footer {
+    display: none;
+  }
+
+  .intro, .contact-section, .skills-section, .about-section, .projects-section, .resume-section {
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .profile-pic {
+    display: none;
+  }
+
+  table, th, td {
+    border: 1px solid #000;
+    padding: 8px;
+  }
+
+  button, input, textarea {
+    display: none;
+  }
+}
