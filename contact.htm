@@ -1,0 +1,64 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Sol Lopez" />
+  <meta name="author" content="Sol Lopez" />
+  <meta name="date" content="2025-04-09" />
+  <title>Contact | Sol Lopez's Portfolio</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="print.css" media="print">
+  <link rel="stylesheet" href="slicknav.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jquery.slicknav.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#menu').slicknav();
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Sol Lopez Logo" class="logo">
+    <nav>
+      <ul id="menu">
+        <li><a href="index.htm">Home</a></li>
+        <li><a href="about.htm">About Me</a></li>
+        <li><a href="resume.htm">Resume</a></li>
+        <li><a href="projects.htm">Projects</a></li>
+        <li><a href="skills.htm">Skills</a></li>
+        <li><a href="contact.htm">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1>Contact Me</h1>
+      <form action="response.htm" method="get">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" required></textarea>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Tested: 2025-04-09 | Produced: 2025-04-09</p>
+  </footer>
+</body>
+</html>
